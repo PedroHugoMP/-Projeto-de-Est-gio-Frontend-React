@@ -1,5 +1,5 @@
 # Projeto de Estágio Frontend React
-# se quiser dar uma olhadinha no site publicado da uma 👀olhadinha aqui😉👉
+# se quiser dar uma olhadinha no site publicado da uma 👀olhadinha aqui😉👉https://pedrohugomp.github.io/Projeto-react/
 <img src="Imagem do WhatsApp de 2023-06-21 à(s) 23.27.13.jpg" alt="exemplo imagem">
 
 > Projeto sugerido pelo programa de estagio da App Masters, onde devemos criar uma lista de jogos utilizando react e uma api fornecida pelo programa.
