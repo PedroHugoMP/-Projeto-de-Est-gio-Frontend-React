@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Circles } from 'react-loader-spinner';
-const API_BASE_URL = 'https://hugopedro331@gmail.com/games-test-api-81e9fb0d564a.herokuapp.com/api/data';
+const API_BASE_URL = 'https://games-test-api-81e9fb0d564a.herokuapp.com/api/data';
 
 function App() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  useEffect(() => {
+ /* useEffect(() => {
     const fetchGames = async () => {
       try {
         setLoading(true);
@@ -20,6 +20,24 @@ function App() {
       }
     };
     fetchGames();
+  }, []); */
+
+  useEffect(() => {
+  const fetchGames = async () => {
+    try {
+      setLoading(true);
+      const response = await axios.get(API_BASE_URL, {
+        headers: {
+          'dev-email-address': 'seu-email@example.com' // Substitua pelo seu endereço de e-mail
+        }
+      });
+      setGames(response.data);
+      setLoading(false);
+    } catch (error) {
+      handleError(error);
+    }
+  };
+  fetchGames();
   }, []);
 
   const handleError = (error) => {
@@ -46,6 +64,9 @@ function App() {
     setGames(filteredGames);
   };
 
+  const handleReload = () => {
+    window.location.reload();
+  };
   return (
     <div className="App">
       <h1>Lista de Jogos</h1>
@@ -55,7 +76,13 @@ function App() {
         onChange={handleSearch}
       />
       <div className="genre-filter">
-        <button onClick={() => setGames(games)}>Pesquisar</button>
+      <button onClick={() => setGames(games)} className="re re-position-top">
+  Pesquisar
+</button>
+<button onClick={handleReload} className="reload-button re re-position-top">
+  Recarregar
+</button>
+
         {Array.from(new Set(games.map((game) => game.genre))).map((genre) => (
           <button key={genre} onClick={() => handleGenreFilter(genre)}>
             {genre}
@@ -67,7 +94,7 @@ function App() {
       ) : loading ? (
         <Circles type="ThreeDots" color="#00BFFF" height={80} width={80} />
       ) : (
-        <div className="game-list">
+        <div className="game-list li"> {"Listagem dos Jogos:"}
           {games.map((game) => (
             <div key={game.id} className="game-card">
               <img src={game.image} alt={game.title} />

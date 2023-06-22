@@ -1,13 +1,74 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 50px;
 }
 
 h1 {
+  font-size: 24px;
   margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.genre-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.genre-filter button {
+  padding: 8px 16px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Define 3 colunas com largura igual */
+    gap: 20px;
+  }
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-card img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.game-card h2 {
+  margin-top: 10px;
+  font-size: 16px;
   text-align: center;
 }
 
-input {
-  margin-bottom: 20px
+.search-button {
+  background-color: #e0e0e0;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
 }
+
+.reload-button {
+  background-color: #e0e0e0;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
