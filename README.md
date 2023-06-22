@@ -1,6 +1,6 @@
 # Projeto de Estágio Frontend React
 
-<img src="exemplo-image.png" alt="exemplo imagem">
+<img src="Imagem do WhatsApp de 2023-06-21 à(s) 23.27.13.jpg" alt="exemplo imagem">
 
 > Projeto sugerido pelo programa de estagio da App Masters, onde devemos criar uma lista de jogos utilizando react e uma api fornecida pelo programa.
 
@@ -20,10 +20,11 @@ Todos os requisitos do projeto:
 - [x] Sempre que apresentar uma mensagem para o usuário, ou tiver os dados em mãos para apresentar, ocultar o loader
 - [x] Incluir um campo de busca, que permite localizar jogos pelo título, com busca case insensitive
 - [x] Uma vez que tenha os dados em mãos, veja quais genre foram retornados e permita ao usuário selecionar um deles, e então filtre para exibir apenas jogos do gênero selecionado
-
+<img src="Imagem do WhatsApp de 2023-06-21 à(s) 23.25.14.jpg" alt="exemplo imagem">
 ## 📝 Licença
 
 Todos os direitos reservados a Pedro Hugo!
 
 [⬆ Voltar ao topo](#Projeto de Estágio Frontend React
 )<br>
+<img src="Imagem do WhatsApp de 2023-06-21 à(s) 23.25.13.jpg" alt="exemplo imagem">
